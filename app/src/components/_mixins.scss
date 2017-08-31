@@ -1,0 +1,42 @@
+@import './colors';
+@import './globals';
+
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+
+/**
+ * Mixin to customize scrollbars
+ * @param {Length} $size - Horizontal scrollbar's height and vertical scrollbar's width
+ * @param {Color} $foreground-color - Scrollbar's color
+ * @param {Color} $background-color [mix($foreground-color, white, 50%)] - Scrollbar's color
+ * @example scss - Scrollbar styling
+ * @include scrollbars(.5em, slategray);
+ */
+@mixin scrollbars($size: .6em, $foreground-color: $silver-chalice, $background-color: mix($foreground-color, white,  50%)) {
+  // For Google Chrome
+  ::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: $foreground-color;
+  }
+
+  ::-webkit-scrollbar-track {
+    border-radius: 20px;
+    background: $background-color;
+  }
+
+  // For Internet Explorer
+  body {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}

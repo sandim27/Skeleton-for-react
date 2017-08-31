@@ -1,0 +1,31 @@
+
+$weights: 100 300 500 700 900;
+
+@each $weight in $weights {
+  @font-face {
+    font-family: 'Museo Sans';
+    font-style: normal;
+    font-weight: $weight;
+    src: url('../../assets/fonts/MuseoSans/MuseoSans-#{$weight}.otf') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'Museo Sans';
+    font-style: italic;
+    font-weight: $weight;
+    src: url('../../assets/fonts/MuseoSans/MuseoSans-#{$weight}Italic.otf') format('opentype');
+  }
+}
+
+$path: '../../assets/fonts/Helvetica Neue LT Std';
+$prefix: 'HelveticaNeueLTStd-';
+
+@font-face {
+  src: url('#{$path}/#{$prefix}MdCn.otf') format('truetype');
+  font-family: 'HelveticaNeueLT Std Med Cn';
+  font-weight: normal;
+}
+
+body {
+  font-family: 'Museo Sans', 'Roboto', sans-serif;
+}
