@@ -9,7 +9,6 @@ import SecondPage from './containers/SecondPage';
 
 import '../index.html';
 import './components/_typography.scss';
-import '../assets/iconStyles/icons.css';
 
 /**
  * Bootstrap React Application

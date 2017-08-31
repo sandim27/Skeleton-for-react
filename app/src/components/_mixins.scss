@@ -9,34 +9,20 @@
   }
 }
 
-/**
- * Mixin to customize scrollbars
- * @param {Length} $size - Horizontal scrollbar's height and vertical scrollbar's width
- * @param {Color} $foreground-color - Scrollbar's color
- * @param {Color} $background-color [mix($foreground-color, white, 50%)] - Scrollbar's color
- * @example scss - Scrollbar styling
- * @include scrollbars(.5em, slategray);
- */
-@mixin scrollbars($size: .6em, $foreground-color: $silver-chalice, $background-color: mix($foreground-color, white,  50%)) {
-  // For Google Chrome
-  ::-webkit-scrollbar {
-    width: $size;
-    height: $size;
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (min-width: 70em) { @content ; }
   }
-
-  ::-webkit-scrollbar-thumb {
-    border-radius: 20px;
-    background: $foreground-color;
+  @else if $point == laptop {
+    @media (min-width: 64em) { @content ; }
   }
-
-  ::-webkit-scrollbar-track {
-    border-radius: 20px;
-    background: $background-color;
+  @else if $point == tablet {
+    @media (min-width: 50em) { @content ; }
   }
-
-  // For Internet Explorer
-  body {
-    scrollbar-face-color: $foreground-color;
-    scrollbar-track-color: $background-color;
+  @else if $point == phablet {
+    @media (min-width: 37.5em)  { @content ; }
+  }
+  @else if $point == mobileonly {
+    @media (max-width: 37.5em)  { @content ; }
   }
 }
