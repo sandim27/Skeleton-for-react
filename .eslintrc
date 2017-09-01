@@ -5,7 +5,8 @@
     "mocha": true
   },
   "globals": {
-    "document": true
+    "document": true,
+    "window": true
   },
   "rules": {
     "jsx-a11y/href-no-hash": "off",

@@ -26,6 +26,10 @@ export default class FirstPage extends React.Component {
     return (
       <div>
         <h1>It is FirstPage</h1>
+        <img
+          alt="loading"
+          src={`${window.PUBLIC_URI}app/assets/images/icon-loading-data.gif`}
+        />
       </div>
 
     );
