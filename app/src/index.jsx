@@ -8,6 +8,7 @@ import FirstPage from './containers/FirstPage';
 import SecondPage from './containers/SecondPage';
 
 import '../index.html';
+import '../assets/iconStyles/icons.css';
 import './components/_typography.scss';
 
 /**

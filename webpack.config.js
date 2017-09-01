@@ -118,7 +118,7 @@ module.exports = Object.assign({
         include: [
           path.resolve(__dirname, './node_modules/font-awesome/css'),
           path.resolve(__dirname, './node_modules/material-design-icons/'),
-          path.resolve(__dirname, './node_modules/react-datetime/')
+          path.resolve(__dirname, 'app/assets/iconStyles/'),
         ]
       },
 
