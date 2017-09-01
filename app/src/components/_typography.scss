@@ -1,4 +1,30 @@
 
+$weights: 100 300 600;
+$pathToOpenSans: '../../assets/fonts/OpenSans';
+$prefixOpenSans: 'OpenSans';
+
+@each $weight in $weights {
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: $weight;
+    src:
+      url('#{$pathToOpenSans}/#{$prefixOpenSans}-#{$weight}.eot?#iefix') format('embedded-opentype'),
+      url('#{$pathToOpenSans}/#{$prefixOpenSans}-#{$weight}.ttf')  format('truetype'),
+      url('#{$pathToOpenSans}/#{$prefixOpenSans}-#{$weight}.svg##{$pathToOpenSans}/#{$prefixOpenSans}-#{$weight}') format('svg');
+  }
+
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: $weight;
+    src:
+      url('#{$pathToOpenSans}/#{$prefixOpenSans}-#{$weight}italic.eot?#iefix') format('embedded-opentype'),
+      url('#{$pathToOpenSans}/#{$prefixOpenSans}-#{$weight}italic.ttf')  format('truetype'),
+      url('#{$pathToOpenSans}/#{$prefixOpenSans}-#{$weight}italic.svg##{$pathToOpenSans}/#{$prefixOpenSans}italic') format('svg');
+  }
+}
+
 body {
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
