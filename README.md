@@ -12,12 +12,6 @@ Install all dependencies
 npm install
 ```
 
-
-Rebuild node-sass for your OS configuration
-```
-npm rebuild node-sass
-```
-
 Start app
 ```
 npm start

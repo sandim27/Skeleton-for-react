@@ -36,8 +36,5 @@ export default class App extends Component {
  * @prop {Node} propTypes.children - Child nodes of this component
  */
 App.propTypes = {
-  children: React.PropTypes.oneOfType([
-    React.PropTypes.element,
-    React.PropTypes.arrayOf(React.element)
-  ]).isRequired
+  children: React.PropTypes.node.isRequired
 };

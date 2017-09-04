@@ -3,5 +3,4 @@ node_modules/
 dist/
 .idea/
 docs/
-yarn.lock
 unit-tests-report.html

@@ -6,7 +6,7 @@ import history from '../history';
 
 /**
  * Redirect middleware
- * @returns {function(): function(): function()} Action redirect handler
+ * @returns {Function} Action redirect handler
  */
 function session() {
   return () => next => action => {
