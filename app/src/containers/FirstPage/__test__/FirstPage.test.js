@@ -7,11 +7,18 @@ import FirstPage from '../FirstPage';
 
 
 describe('FirstPage container component', () => {
-  const component = mount(
-    <FirstPage/>
-  );
+
+  let component;
+  beforeEach(()=> {
+    component = mount(
+      <FirstPage/>
+    );
+  });
 
   it('should render 1 H1', () => {
-    expect(component.find('h1')).to.have.length(1);
+    const H1 = component.find('h1');
+
+    expect(H1).to.have.length(1);
+    expect(H1.at(0).text()).to.equal("It is FirstPage");
   });
 });
