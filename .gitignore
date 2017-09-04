@@ -1,0 +1,6 @@
+# initial
+node_modules/
+dist/
+.idea/
+docs/
+unit-tests-report.html
