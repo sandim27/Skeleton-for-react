@@ -22,6 +22,8 @@ const devLoaders = isProd ? [] : [
 const devConfig = isProd ? {} : {
     devtool: 'source-map',
     devServer: {
+      disableHostCheck: true,
+      public: 'http://db2a4263.ngrok.io',
       historyApiFallback: true,
       proxy: [
         {
